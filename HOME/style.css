@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --orange: #F27822;
+    --white: #eeeeee;
+    --black: #0C1014;
+    --gray: #8f8f8f;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 700px;
+     backdrop-filter: blur(10px) brightness(0.6);
+    padding: 10px 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 0 auto;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.header-logo img {
+    width: 70px;
+}
+
+.header-logo img:hover {
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover{
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+.current-page {
+    color: var(--orange);
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--orange);
+}
+
+.btn-header {
+    background-color: var(--orange);
+    outline: none;
+    border: none;
+    color: var(--black);
+    padding: 16px 20px;
+    font-weight: 400;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-header:hover{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: var(--white);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+/* Parallax */
+
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imgs-parallax {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    pointer-events: none;
+    filter: brightness(0.4);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    z-index: 2;
+    color: var(--white);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px 40px 0px 40px;
+    padding: 40px;
+}
+
+.rightwall {
+    z-index: 2;
+}
+
+.frontwall{
+    z-index: 2;
+}
+
+.leftwall{
+    z-index: 2;
+}
+
+.frontfurniture{
+    z-index: 3;
+}
+
+.backfurniture{
+    z-index: 2;
+}
+
+.floor{
+    z-index: 1;
+}
+
+.hero-text h1{
+    font-family: "Playfair", serif;
+    font-size: 110px;
+    border-radius: 40px;
+    font-weight: 900;
+    line-height: 0.85;
+    margin-bottom: 5px;
+}
+
+.hero-text p{
+    font-size: 20px;
+}
+
+.btn-hero{
+    outline: none;
+    border: none;
+    background-color: var(--orange);
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Before and after */
+
+.before-after {
+    background-color: var(--black);
+    padding-bottom: 100px;
+}
+
+.title-section{
+    text-align: center;
+    font-size: 80px;
+    margin-top: 20px;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+.subtitle-section{
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 50px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.card{
+    border-radius: 0px 20px 0px 20px;
+    width: 400px;
+    height: 500px;
+    background-color: var(--orange);
+    background-image: url("https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    filter: brightness(0.8);
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    background-image: url("https://images.unsplash.com/photo-1599696848652-f0ff23bc911f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    filter: brightness(0.8);
+}
+
+/* Enviroments */
+
+.enviroments{
+    background-color: var(--white);
+    padding-bottom: 100px;
+}
+
+.title-section-dark{
+    text-align: center;
+    font-size: 80px;
+    padding-top: 100px;
+    color: var(--black);
+    line-height: 1.3;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    margin: 80px 300px 0px;
+}
+    
+/* Cozinhas */
+.div1 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    background-color: red;
+    height: 300px;
+    background-image: url("https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1568&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+/* Sala */
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-color: red;
+    background-image: url("https://plus.unsplash.com/premium_photo-1676823553207-758c7a66e9bb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+/* Quarto */
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background-color: red;
+    background-image: url("https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+/* Banheiros */
+.div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    background-color: red;
+    background-image: url("https://plus.unsplash.com/premium_photo-1661902468735-eabf780f8ff6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+}
+
+.grid-enviroments{
+    transition: 0.3s all ease;
+}
+
+.grid-enviroments:hover{
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+.grid-enviroments .pop-up{
+    background-color: var(--black);
+    text-align: center;
+    width: 120px;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.grid-enviroments .pop-up p{
+    padding: 20px;
+    font-weight: 500;
+}
+
+/* About */
+
+.about {
+    background-color: #c45200;
+    display: flex;
+    padding-bottom: 100px;
+    align-items: center;
+    padding: 100px 200px;
+    gap: 300px;
+}
+
+.image-about div{
+    background-image: url("https://plus.unsplash.com/premium_photo-1670950411934-e21abf39191e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    border-radius: 30px;
+    width: 600px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.title-about{
+    font-size: 60px;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    margin-top: 40px;
+    background-color: var(--black);
+    color: var(--orange);
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background: var(--white);
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    padding: 40px;
+}
