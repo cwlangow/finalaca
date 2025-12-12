@@ -42,11 +42,8 @@ Scroll cinematográfico com ScrollSmoother
 HTML5 - Estrutura do site
 
 - CSS3 - Estilização, grid, responsividade e animações
-
 - GSAP (GreenSock) - Parallax, transições e scroll animado
-
 - ScrollSmoother - Rolagem suave e imersiva
-
 - Google Fonts - Tipografia profissional
 
 ---
